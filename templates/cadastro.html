@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+<div class="container d-flex justify-content-center align-items-center" style="padding-top: 100px;">
+    <form class="needs-validation " novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip01">Primeiro nome</label>
+            <input type="text" class="form-control" id="validationTooltip01" placeholder="Nome" required>
+            <div class="valid-tooltip">
+              Tudo certo!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltip02">Sobrenome</label>
+            <input type="text" class="form-control" id="validationTooltip02" placeholder="Sobrenome" required>
+            <div class="valid-tooltip">
+              Tudo certo!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationTooltipUsername">Usuário</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+              </div>
+              <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Usuário" aria-describedby="validationTooltipUsernamePrepend" required>
+              <div class="invalid-tooltip">
+                Por favor, escolha um usuário válido e único.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">Cidade</label>
+            <input type="text" class="form-control" id="validationTooltip03" placeholder="Cidade" required>
+            <div class="invalid-tooltip">
+              Por favor, informe uma cidade válida.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationTooltip04">Estado</label>
+            <select class="custom-select form-control" id="validationTooltip04" required>
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+              </select>
+            <div class="invalid-tooltip">
+              Por favor, informe um estado válido.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationTooltip05">CEP</label>
+            <input type="text" class="form-control" id="validationTooltip05" placeholder="CEP" required>
+            <div class="invalid-tooltip">
+              Por favor, informe um CEP válido.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+</div>
+{% endblock %}
