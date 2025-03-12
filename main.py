@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for
+from forms import FormCadastro, FormLogin
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '1072e926d71a094f491476e564a2443f'
 
 @app.route('/')
 def home():
@@ -17,11 +19,13 @@ def contato():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    form_login = FormLogin()
+    return render_template('login.html', form_login=form_login)
 
 @app.route('/cadastro')
 def cadastro():
-    return render_template('cadastro.html')
+    form_cadastro = FormCadastro()
+    return render_template('cadastro.html', form_cadastro=form_cadastro)
 
 
 

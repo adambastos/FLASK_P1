@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block body %}
+{{ form_cadastro }}
 <div class="container d-flex justify-content-center align-items-center" style="padding-top: 100px;">
     <form class="needs-validation " novalidate>
         <div class="form-row">
@@ -22,12 +23,12 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <label for="validationTooltipUsername">Usuário</label>
+            <label for="validationTooltipUsername">E-mail</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
               </div>
-              <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Usuário" aria-describedby="validationTooltipUsernamePrepend" required>
+              <input type="text" class="form-control" id="validationTooltipUsername" placeholder="E-mail" aria-describedby="validationTooltipUsernamePrepend" required>
               <div class="invalid-tooltip">
                 Por favor, escolha um usuário válido e único.
               </div>
