@@ -17,12 +17,12 @@ def usuarios():
 def contato():
     return render_template('contato.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     form_login = FormLogin()
     return render_template('login.html', form_login=form_login)
 
-@app.route('/cadastro')
+@app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     form_cadastro = FormCadastro()
     return render_template('cadastro.html', form_cadastro=form_cadastro)
