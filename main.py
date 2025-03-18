@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, flash, redirect
 from forms import FormCadastro, FormLogin
 
 app = Flask(__name__)
@@ -17,14 +17,20 @@ def usuarios():
 def contato():
     return render_template('contato.html')
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login():
-    form_login = FormLogin()
+    form_login = FormLogin() #Uma instância do formulário de Login
+    if form_login.validate_on_submit():
+        flash('Login realizado com sucesso!', 'alert-success')
+        return redirect(url_for('home'))
     return render_template('login.html', form_login=form_login)
 
-@app.route('/cadastro')
+@app.route('/cadastro', methods=['POST', 'GET'])
 def cadastro():
     form_cadastro = FormCadastro()
+    if form_cadastro.validate_on_submit():
+        flash('Cadastro efetuado com sucesso!', 'alert-success')
+        return redirect(url_for('home'))
     return render_template('cadastro.html', form_cadastro=form_cadastro)
 
 
