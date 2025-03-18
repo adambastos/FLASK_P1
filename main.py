@@ -1,8 +1,10 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from forms import FormCadastro, FormLogin
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '1072e926d71a094f491476e564a2443f'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:201611@localhost/FLASK_P1'
 
 @app.route('/')
 def home():
