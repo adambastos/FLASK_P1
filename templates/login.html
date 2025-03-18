@@ -9,6 +9,7 @@
                 <legend>Login</legend>
                 <hr>
                 <fieldset>
+                
                 <div class="form-group" style="max-width: 35vh;">
                     {{ form_login.email.label (class="form-control-label") }}
                     
@@ -21,11 +22,9 @@
                         </div>
                     {% else %}
                         {{ form_login.email (class="form-control") }}
-                    {% endif %}
-
-                    
-                    
+                    {% endif %}     
                 </div>
+                
                 <div class="form-group" style="max-width: 35vh;">
                     {{ form_login.senha.label (class="form-control-label")}}
                     {{ form_login.senha (class="form-control") }}
