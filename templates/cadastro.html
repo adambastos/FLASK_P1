@@ -7,6 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
+<<<<<<< HEAD
       <form method="post" style="padding-top: 30px;">
         {{ form_cadastro.csrf_token }}
         <legend>Cadastre-se</legend>
@@ -30,9 +31,37 @@
           </div>
         </fieldset>
         {{ form_cadastro.btn_criar(class="btn btn-primary") }}
+=======
+      <form method="POST" action="">
+        <legend style="padding-top: 50px;">Criar conta</legend>
+        <hr>
+        <fieldset>
+          <div class="form-group" style="max-width: 50vh;">
+            {{ form_cadastro.username.label (class="form-label") }}
+            {{ form_cadastro.username (class="form-control")}}
+          </div>
+          <div class="form-group" style="max-width: 50vh;">
+            {{form_cadastro.email.label (class="form-label")}}
+            {{form_cadastro.email (class="form-control")}}
+          </div>
+          <div class="form-group" style="max-width: 50vh;">
+            {{form_cadastro.senha.label (class="form-label")}}
+            {{form_cadastro.senha (class="form-control")}}
+          </div>
+          <div class="form-group" style="max-width: 50vh;">
+            {{form_cadastro.confirm_pass.label (class="form-label")}}
+            {{form_cadastro.confirm_pass (class="form-control")}}
+          </div>
+        </fieldset>
+        {{form_cadastro.btn_criar (class="btn btn-primary")}}
+>>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
       </form>
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
 {% endblock %}

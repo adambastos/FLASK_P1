@@ -1,6 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
+<<<<<<< HEAD
 from wtforms.validators import DataRequired, Length, Email, EqualTo
+=======
+from wtforms.validators import DataRequired, Length, Email, EqualTo 
+>>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
 
 class FormCadastro(FlaskForm):
     username = StringField('Nome', validators=[DataRequired()])
@@ -12,5 +16,9 @@ class FormCadastro(FlaskForm):
 class FormLogin(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
     senha = PasswordField('Senha', validators=[DataRequired(), Length(6, 20)])
+<<<<<<< HEAD
     lembrar_dados = BooleanField('Lembrar dados')
+=======
+    lembrarme = BooleanField('Lembrar meus dados')
+>>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
     btn_logar = SubmitField('Entrar')

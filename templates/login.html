@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block body %}
+<<<<<<< HEAD
 <div class="container">
     <div class="row form-group">
         <div class="col">
@@ -28,4 +29,32 @@
     </div>    
 </div>
 
+=======
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <form method="POST" action="">
+            <legend style="padding-top: 50px;">Login</legend>
+            <hr>
+            <fieldset>
+                <div class="form-group" style="max-width: 50vh;">
+                    {{form_login.email.label (class="form-label")}}
+                    {{form_login.email (class="form-control")}}
+                </div>
+                <div class="form-group" style="max-width: 50vh;">
+                    {{form_login.senha.label (class="form-label")}}
+                    {{form_login.senha (class="form-control")}}
+                </div>
+                <div class="form-group" style="padding-left: 19px;">
+                    {{form_login.lembrarme (class="form-check-input")}}
+                    {{form_login.lembrarme.label}}
+                </div>
+            </fieldset>
+            {{form_login.btn_logar (class="btn btn-primary")}}
+        </form>
+      </div>
+    </div>
+  </div>
+>>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
 {% endblock %}
