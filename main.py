@@ -17,11 +17,7 @@ def usuarios():
 def contato():
     return render_template('contato.html')
 
-<<<<<<< HEAD
 @app.route('/login', methods=['POST', 'GET'])
-=======
-@app.route('/login', methods=['GET', 'POST'])
->>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
 def login():
     form_login = FormLogin() #Uma instância do formulário de Login
     if form_login.validate_on_submit():
@@ -29,11 +25,7 @@ def login():
         return redirect(url_for('home'))
     return render_template('login.html', form_login=form_login)
 
-<<<<<<< HEAD
 @app.route('/cadastro', methods=['POST', 'GET'])
-=======
-@app.route('/cadastro', methods=['GET', 'POST'])
->>>>>>> 65f71c4fa2015b2dd1c026de1292f288d3ad70b5
 def cadastro():
     form_cadastro = FormCadastro()
     if form_cadastro.validate_on_submit():
