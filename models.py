@@ -8,7 +8,7 @@ class Usuario(db.Model):
     email = db.Column(db.String(100), unique=True, nullable=False) 
     senha = db.Column(db.String(100), nullable=False)
     foto_perfil = db.Column(db.String, default='default.jpg')
-    posts = db.relationship('Post', backref='autor', lazy=True)
+    posts = db.relationship('Post', backref='autor', lazy=True) #O backref cria automaticamente um atributo 'autor' na classe Post
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
