@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from ProjFlask_1 import app, db
 from ProjFlask_1.forms import FormCadastro, FormLogin
-from ProjFlask_1.models import Usuario
+from ProjFlask_1.models import Usuario, Post
 
 @app.route('/')
 def home():
@@ -34,3 +34,4 @@ def cadastro():
         flash('Cadastro efetuado com sucesso!', 'alert-success')
         return redirect(url_for('home'))
     return render_template('cadastro.html', form_cadastro=form_cadastro)
+
